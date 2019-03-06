@@ -19,6 +19,22 @@ export const fr = {
     country: 'Pays',
     department: 'Département',
   },
+  footer:{
+    about_destibox: 'A propos de Destibox',
+    about_us: 'A propos de nous',
+    Quality_charter: 'Charte Qualité',
+    legals_information: 'Informations Légales',
+    Sponsorship_by_destibox:'Le parrainage par destibox',
+    Satisfied_or_Refunded_Warranty:'Garantie Satisfait ou Remboursé',
+    Need_some_help:"Besoin d'aide?",
+    help_and_contact:'Aide et contact',
+    How_does_it_work:'Comment ça marche ?',
+    Delivery_terms_and_conditions:'Conditions de livraison',
+    Exchange_and_extension:'Echange et prolongation',
+    payment_method:'Moyen de Paiement',
+    follow_us:'Suivez nous',
+  },
+
   $vuetify: {
     dataIterator: {
       rowsPerPageText: 'Eléments par page:',
