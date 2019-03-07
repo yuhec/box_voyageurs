@@ -3,6 +3,8 @@ import './plugins/vuetify'
 import App from './App.vue'
 import i18n from '@/services/i18n'
 
+import '@/services/db'
+
 Vue.config.productionTip = false
 
 new Vue({

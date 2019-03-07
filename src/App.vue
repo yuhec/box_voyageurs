@@ -12,7 +12,7 @@
     </v-toolbar>
 
     <v-content>
-      <HelloWorld/>
+      <home/>
     </v-content>
     <v-footer class="footer is-primary" height="auto" dark style="background-color: black">
       <v-container>
@@ -71,17 +71,33 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import Home from "./components/Home";
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    HelloWorld
+    Home,
   },
-  data() {
+  data () {
     return {
       //
-    };
+    }
+  },
+  created () {
+    this.create_theme()
+  },
+  methods: {
+    create_theme() {
+      this.$vuetify.theme = {
+        primary: '#ffffff',
+        secondary: '#D5D5D5',
+        accent: '#ffffff',
+        error: '#E53935',
+        info: '#2196F3',
+        success: '#4e974e',
+        warning: '#FFC107',
+      }
+    }
   }
-};
+}
 </script>

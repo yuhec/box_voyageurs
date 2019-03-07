@@ -35,6 +35,11 @@ export const fr = {
     follow_us:'Suivez nous',
   },
 
+  categories: 'Type de voyage',
+  destination: 'Destination',
+  lets_go: 'C\'est parti !',
+  find_my_box: 'Trouver la box idéale pour moi',
+  explore_our_boxes: 'Explorez nos boxes',
   $vuetify: {
     dataIterator: {
       rowsPerPageText: 'Eléments par page:',

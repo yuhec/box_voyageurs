@@ -1,11 +1,10 @@
 import Vue from 'vue'
 import { Module } from './modules/Module'
-import { CaseFile }  from './modules/CaseFiles'
 
 const db = {
   install (Vue) {
     Vue.prototype.$db = {
-      activity_types: new CaseFile({
+      activity_types: new Module({
         api_path: 'activity-types',
         lazy_loading: false,
         load_on_get: false,
@@ -72,7 +71,7 @@ const db = {
         load_on_get: false,
       }),
       photo_events: new Module({
-        api_path: 'photo_events',
+        api_path: 'photo-events',
         lazy_loading: false,
         load_on_get: false,
       }),
