@@ -19,6 +19,15 @@ export const fr = {
     country: 'Pays',
     department: 'Département',
   },
+  header: {
+    search: 'Rechercher',
+    account: 'Compte',
+    shopping_cart: 'Panier',
+    home: 'Accueil',
+    boxes: 'Toutes nos boxes',
+    destinations: 'Toutes nos destinations',
+    my_box: 'J\'ai une box',
+  },
   footer:{
     about_destibox: 'A propos de Destibox',
     about_us: 'A propos de nous',
@@ -52,7 +61,8 @@ export const fr = {
     dataTable: {
       rowsPerPageText: 'Lignes par page:'
     },
-    noDataText: 'Aucune donnée disponible'
+    noDataText: 'Aucune donnée disponible',
+    noDataAvailable: 'Aucune donnée disponible'
   },
   '' : '',
 }

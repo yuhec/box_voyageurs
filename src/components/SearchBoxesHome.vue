@@ -26,8 +26,10 @@
             <v-flex md5 xs12>
               <v-autocomplete
                 :label="$t('destination')"
-                :items="destinations"
+                :items="get_formatted_destinations"
                 :loadings="loadings.destinations"
+                item-text="name"
+                item-value="id"
                 dark
               />
             </v-flex>
@@ -66,6 +68,13 @@
         }
       }
     },
+    computed: {
+      get_formatted_destinations() {
+        return this.destinations.map((destination) => {
+          return destination.city + ', ' + destination.country.toUpperCase();
+        })
+      },
+    },
     created() {
       this.load_destinations();
       this.load_categories()
@@ -74,13 +83,11 @@
       async load_destinations () {
         this.loadings.destinations = true;
         this.destinations = await this.$db.destinations.get_all_elements();
-        console.log(this.destinations);
         this.loadings.destinations = false
       },
       async load_categories () {
         this.loadings.categories = true;
         this.categories = await this.$db.categories.get_all_elements();
-        console.log(this.categories);
         this.loadings.categories = false
       },
       search_destination() {

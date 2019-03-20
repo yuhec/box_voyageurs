@@ -1,19 +1,65 @@
 <template>
-  <v-app>
-    <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn flat href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank">
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
-    </v-toolbar>
+  <v-app style="background-color: white">
+    <div style="font-family:Arial">
+      <v-layout
+        row
+        wrap
+        style="padding: 20px 20px 5px 20px"
+      >
+        <v-flex xs3 md3>
+          <v-text-field
+            :label="$t('header.search')"
+            prepend-inner-icon="search"
+          />
+        </v-flex>
+        <v-spacer/>
+        <v-flex xs2 md2 style="text-align: center">
+          <v-icon color="black">account_circle</v-icon>
+          <br>
+          <a href="/" style="color: black!important;">{{ $t('header.account').toUpperCase() }}</a>
+        </v-flex>
+        <v-flex xs2 md2 style="text-align: center">
+          <v-icon color="black">shopping_cart</v-icon>
+          <br>
+          <a href="/" style="color: black!important;">{{ $t('header.shopping_cart').toUpperCase() }}</a>
+        </v-flex>
+      </v-layout>
+      <v-layout
+        row
+        wrap
+        justify-center
+        style="color: white; background-color: black; font-size: 15px; text-align: center"
+      >
+
+        <v-flex xs2 md2 style="margin: auto 0;">
+          <a href="/">{{ $t('header.home').toUpperCase() }}</a>
+        </v-flex>
+        <v-flex xs2 md2 style="margin: auto 0;">
+          <a href="/">{{ $t('header.boxes').toUpperCase() }}</a>
+        </v-flex>
+        <v-flex xs2 md2>
+          <v-img
+            :src="src_logo"
+            max-height="200px"
+            max-width="200px"
+            alt="destibox-logo"
+            style="margin-top: -30px; z-index: 1000; margin-bottom: -30px; background-color: white; border-radius: 76px;"
+          />
+        </v-flex>
+        <v-flex xs2 md2 style="margin: auto 0;">
+          <a href="/">{{ $t('header.destinations').toUpperCase() }}</a>
+        </v-flex>
+        <v-flex xs2 md2 style="margin: auto 0;">
+          <a href="/" >{{ $t('header.my_box').toUpperCase() }}</a>
+          <!--<v-icon>card_giftcard</v-icon>-->
+        </v-flex>
+      </v-layout>
+    </div>
 
     <v-content>
       <home/>
     </v-content>
+
     <v-footer class="footer is-primary" height="auto" dark style="background-color: black">
       <v-container>
         <v-layout row wrap justify-center>
@@ -31,7 +77,6 @@
             <p>{{$t('footer.How_does_it_work')}}</p>
             <p>{{$t('footer.Delivery_terms_and_conditions ')}}</p>
             <p>{{$t('footer.Exchange_and_extension ')}}</p>
-            <p>{{$t('footer.')}}</p>
           </v-flex>
 
           <v-flex md4>
@@ -60,8 +105,6 @@
 
           <v-flex xs12 md12 style="text-align: center">
             <p>Conditions Générales de Vente Politique de confidentialité et cookies Mentions Légales</p>
-          </v-flex>
-          <v-flex xs12 md12 style="text-align: center">
             <p>© 2019 Wonderbox</p>
           </v-flex>
         </v-layout>
@@ -80,7 +123,7 @@ export default {
   },
   data () {
     return {
-      //
+      src_logo: require('./assets/logo-destibox.png')
     }
   },
   created () {
@@ -101,3 +144,8 @@ export default {
   }
 }
 </script>
+<style>
+  a {
+    text-decoration: none;
+  }
+</style>
